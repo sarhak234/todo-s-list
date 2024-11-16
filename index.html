@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo's list</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="heading">
+        <i class="fa-sharp fa-solid fa-square-check fa-2xl"></i>
+        <h1>My List</h1>
+    </div>
+    <div class="main">
+        <H1 class="note">Just Do It </H1>
+        <h2 class="day">day</h2>
+        <h2 class="time">time</h2>
+    </div>
+    <div class="logicmain">
+        <div class="todo-container">
+            <div class="input-section">
+                <input type="text" class="todo-input" placeholder="Add a new task...">
+                <button class="add-button">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="todo-list">
+                <!-- Example todo items (you can remove these later) -->
+                <div class="todo-item">
+                    <div class="todo-content">
+                        <input type="checkbox" class="todo-checkbox">
+                        <span class="todo-text">Complete the project</span>
+                    </div>
+                    <div class="todo-actions">
+                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
