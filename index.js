@@ -16,7 +16,7 @@ function updateDateTime() {
     
     timeElement.textContent = now.toLocaleTimeString('en-US', { 
         hour: '2-digit', 
-        minute: '2-digit'
+        minute: '2-digit',
     });
 }
 
@@ -34,10 +34,16 @@ function createTodoElement(todo) {
     todoItem.classList.add('todo-item');
     todoItem.dataset.id = todo.id;
 
+    const creationTime = new Date(todo.createdAt).toLocaleTimeString('en-US', { 
+        hour: '2-digit', 
+        minute: '2-digit'
+    });
+
     todoItem.innerHTML = `
         <div class="todo-content">
             <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''}>
             <span class="todo-text" style="${todo.completed ? 'text-decoration: line-through' : ''}">${todo.text}</span>
+            <span class="todot">${creationTime}</span>
         </div>
         <div class="todo-actions">
             <button class="edit-btn"><i class="fas fa-edit"></i></button>
@@ -54,7 +60,8 @@ function addTodo(text) {
         const todo = {
             id: Date.now(),
             text: text,
-            completed: false
+            completed: false,
+            createdAt: new Date().toISOString()
         };
         todos.push(todo);
         saveTodos();
