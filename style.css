@@ -175,6 +175,10 @@ body {
     cursor: pointer;
 }
 
+.todot{
+    margin-left: 70vw;
+}
+
 .todo-text {
     font-family: "Rajdhani", sans-serif;
     font-size: 16px;
@@ -365,5 +369,26 @@ body {
 
     .day, .time {
         font-size: 18px;
+    }
+}
+
+.todot {
+    color: #666;
+    font-size: 14px;
+    font-family: "Rajdhani", sans-serif;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .todot {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todot {
+        font-size: 11px;
+        margin-left: 5px;
     }
 }
